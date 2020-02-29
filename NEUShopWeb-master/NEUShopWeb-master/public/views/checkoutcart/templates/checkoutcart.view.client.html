@@ -1,0 +1,13 @@
+<div ng-if="model.product.length>0" class="container" style="padding-top:20px; ">
+    <div class="well well-sm"><h3>Shopping Cart</h3></div>
+
+    <checkoutcart-card ng-repeat="product in model.product" data="product" deletefrom-cart="model.deletefromCart(product)" onqty-change="model.onqtyChange(product)">
+    </checkoutcart-card>
+
+    <div ng-if="model.product.length>0" class="well text-right" style="font-size: 2em; ">Total - $ {{model.total}}</div>
+    <div ng-if="model.product.length>0 && $root.currentUser === null">Log In to checkout</div>
+    <div ng-if="model.product.length>0 && $root.currentUser !== null"><button ng-click="model.orderProducts()" class="btn btn-default btn-lg">Order Now!</button></div>
+</div>
+<div ng-if="model.product.length === 0 || model.product === undefined " class="container" style="padding-top:20px; " >
+    <div class="well well-sm"><h3>Please add products to your shopping cart</h3></div>
+</div>

@@ -1,0 +1,205 @@
+<div id="section2" class=pad-section>
+    <br><br>
+    <div class="container">
+
+
+        <form class="well form-horizontal" id="contactForm" name="contactForm"  ng-submit="model.submit(contactForm)" novalidate>
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Contact Us Today!</legend>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.firstname.$invalid && !contactForm.firstname.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  ng-model="model.firstname" name="firstname" placeholder="First Name" class="form-control"  type="text" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.firstname.$invalid && !contactForm.firstname.$pristine" class="help-block">Your First name is required.</p>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.lastname.$invalid && !contactForm.lastname.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input  ng-model="model.lastname" name="lastname" placeholder="Last Name" class="form-control"  type="text" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.lastname.$invalid && !contactForm.lastname.$pristine" class="help-block">Your Last name is required.</p>
+                    </div>
+
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                    <div class="col-md-4 inputGroupContainer">
+
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.emaiil.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input  ng-model="model.email" name="email" placeholder="E-mail" class="form-control"  type="email">
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Enter valid E-mail.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.phone.$invalid && !contactForm.phone.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input  ng-model="model.phone" name="phone" placeholder="8573339078" class="form-control"  ng-pattern="/^[7-9][0-9]{9}$/" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.phone.$error.pattern" class="help-block">Enter valid Phone Number.</p>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.address.$invalid && !contactForm.address.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input  ng-model="model.address" name="address" placeholder="Address" class="form-control"  type="text" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.address.$invalid && !contactForm.address.$pristine" class="help-block">Your Address is required.</p>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">City</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.city.$invalid && !contactForm.city.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input  ng-model="model.city" name="city" placeholder="City" class="form-control"  type="text" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.city.$invalid && !contactForm.city.$pristine" class="help-block">Your City is required.</p>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">State</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="state" class="form-control selectpicker" >
+                                <option value=" " >Please select your state</option>
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option >Arizona</option>
+                                <option >Arkansas</option>
+                                <option >California</option>
+                                <option >Colorado</option>
+                                <option >Connecticut</option>
+                                <option >Delaware</option>
+                                <option >District of Columbia</option>
+                                <option> Florida</option>
+                                <option >Georgia</option>
+                                <option >Hawaii</option>
+                                <option >daho</option>
+                                <option >Illinois</option>
+                                <option >Indiana</option>
+                                <option >Iowa</option>
+                                <option> Kansas</option>
+                                <option >Kentucky</option>
+                                <option >Louisiana</option>
+                                <option>Maine</option>
+                                <option >Maryland</option>
+                                <option> Mass</option>
+                                <option >Michigan</option>
+                                <option >Minnesota</option>
+                                <option>Mississippi</option>
+                                <option>Missouri</option>
+                                <option>Montana</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina</option>
+                                <option>North Dakota</option>
+                                <option>Ohio</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina</option>
+                                <option>South Dakota</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option> Uttah</option>
+                                <option>Vermont</option>
+                                <option>Virginia</option>
+                                <option >Washington</option>
+                                <option >West Virginia</option>
+                                <option>Wisconsin</option>
+                                <option >Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Zip Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.zip.$invalid && !contactForm.zip.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input  ng-model="model.zip" name="zip" placeholder="02112" class="form-control"  ng-pattern="/^(\d{5}-\d{4}|\d{5})$/" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.zip.$error.pattern" class="help-block">Enter valid Zip Code.</p>
+                    </div>
+                </div>
+
+                <!-- Text area -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Message</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group" ng-class="{ 'has-error' : contactForm.message.$invalid && !contactForm.message.$pristine }">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                            <textarea  ng-model="model.message" name="message" placeholder="Message" class="form-control"  type="text" required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inputGroupContainer">
+                        <p ng-show="contactForm.message.$invalid && !contactForm.message.$pristine" class="help-block">Your Message is required.</p>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button ng-disabled="contactForm.$invalid"  class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>

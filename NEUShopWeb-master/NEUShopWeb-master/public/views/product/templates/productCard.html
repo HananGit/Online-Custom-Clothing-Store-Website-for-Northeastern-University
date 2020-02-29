@@ -1,0 +1,23 @@
+<div class="block">
+
+    <div class="top">
+        <ul>
+            <li><a ng-click="$ctrl.togglefav($ctrl.data)"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
+            <li><span class="titleProduct">{{$ctrl.data.productName}}</span></li>
+            <li><a ng-click="$ctrl.addtocart()"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="middle">
+        <img ng-src={{$ctrl.data.img}} alt="pic" />
+    </div>
+
+    <div class="bottom">
+        <div class="heading">{{$ctrl.data.description}}</div>
+        <div class="info">{{$ctrl.data.edition}}</div>
+        <div class="style">Color: {{$ctrl.data.color}} / Style: {{$ctrl.data.styleNo}}</div>
+        <div class="price">${{$ctrl.data.sellingPrice}} <span class="old-price">${{$ctrl.data.costPrice}}</span></div>
+    </div>
+
+</div>

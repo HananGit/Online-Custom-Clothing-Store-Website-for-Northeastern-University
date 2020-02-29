@@ -1,0 +1,79 @@
+<div class="container">
+    <h1 class="title">Frequently Asked Questions</h1>
+    <br/>
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Enter your question</label>
+        <input ng-model="searchString" type="text">
+    </md-input-container>
+    <div class="container">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Shipping FAQs</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="faq">
+                    <li ng-repeat="x in shipping | filter:searchString">
+                        <h4 class="list-group-item-heading">{{x.question}}</h4>
+                        <p class="list-group-item-text">{{x.answer}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Billing FAQs</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="faq">
+                    <li ng-repeat="x in billing | filter:searchString">
+                        <h4 class="list-group-item-heading">{{x.question}}</h4>
+                        <p class="list-group-item-text">{{x.answer}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Measurements FAQs</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="faq">
+                    <li ng-repeat="x in measurements | filter:searchString">
+                        <h4 class="list-group-item-heading">{{x.question}}</h4>
+                        <p class="list-group-item-text">{{x.answer}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Fabrics FAQs</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="faq">
+                    <li ng-repeat="x in fabrics | filter:searchString">
+                        <h4 class="list-group-item-heading">{{x.question}}</h4>
+                        <p class="list-group-item-text">{{x.answer}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3>Return and Exchange FAQs</h3>
+            </div>
+            <div class="panel-body">
+                <ul class="faq">
+                    <li ng-repeat="x in returns | filter:searchString">
+                        <h4 class="list-group-item-heading">{{x.question}}</h4>
+                        <p class="list-group-item-text">{{x.answer}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

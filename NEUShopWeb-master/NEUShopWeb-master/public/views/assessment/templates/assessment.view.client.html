@@ -1,0 +1,169 @@
+<div class="container">
+    <h1 class="title">Fit Assessment</h1>
+    <br><br>
+
+    <div>
+        <form name="assessmentForm" class="well form-horizontal" action=" " method="post" id="assessmentForm">
+            <p class="subtext">Below is a simple after-sale assessment, with 4 poses that we ask you recreate and
+                photograph while wearing your Northeastern University shirt.
+                Once you’ve taken similar photos, attach your images below. Within 3 business days, you will receive an
+                e-mail from a Fit Specialist with a detailed assessment of your fit, along with a recommendation of how
+                to ensure all future Northeastern University garments fit exactly as you’d prefer.</p><br>
+
+            <h3><span class="label label-info">First Step: Help us locate your measurements</span></h3><br>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">First Name *</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="fname" class="form-control" ng-model="fname" ng-pattern="/^[A-Za-z]+$/"
+                               id="fname" required="required" size="40" placeholder="First Name">
+                        <span style="color:red"
+                              ng-show="assessmentForm.fname.$touched && assessmentForm.fname.$invalid">
+<span ng-show="assessmentForm.fname.$error.required"> The first name is required.</span>
+<span ng-show="assessmentForm.fname.$error.pattern"> The first name has invalid characters.</span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Last Name *</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="lname" class="form-control" ng-model="lname" ng-pattern="/^[A-Za-z]+$/"
+                               id="lname" required="required" size="40" placeholder="Last Name">
+                        <span style="color:red"
+                              ng-show="assessmentForm.lname.$touched && assessmentForm.lname.$invalid">
+<span ng-show="assessmentForm.lname.$error.required"> The last name is required.</span>
+<span ng-show="assessmentForm.lname.$error.pattern"> The last name has invalid characters.</span></span></div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Email Address *</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input type="email" name="emailAddress" class="form-control" ng-model="emailAddress"
+                               id="emailAddress" placeholder="E-Mail Address" required="required">
+                        <span style="color:red"
+                              ng-show="assessmentForm.emailAddress.$touched && assessmentForm.emailAddress.$invalid">
+<span ng-show="assessmentForm.emailAddress.$error.required"> The email address is required.</span>
+<span ng-show="assessmentForm.emailAddress.$error.email"> This is not a valid e-mail address.</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Order ID *</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+                        <input type="text" name="phone" ng-model="phone" class="form-control" ng-pattern="/^[0-9]+$/i"
+                               id="order" placeholder="Order ID" required="required">
+                        <span style="color:red"
+                              ng-show="assessmentForm.phone.$touched && assessmentForm.phone.$invalid">
+<span ng-show="assessmentForm.phone.$error.required"> The Order ID is required.</span>
+<span ng-show="assessmentForm.phone.$error.pattern"> The Order ID must be a number.</span></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <h3><span class="label label-info">Second Step: Attach photos for the 4 poses below to help us accurately assess your fit</span>
+            </h3><br>
+
+            <div class="row">
+                <div class="col-sm-6 right">
+                    <h4 class="visible-xs text-center">Front View</h4>
+                    <figure class="text-center"><img src="images/frontview.JPG" alt="Front View"/></figure>
+                </div>
+                <div class="col-sm-6">
+                    <h4><span class="label label-danger">Front View </span></h4>
+                    <p>How does your shirt look from the front, arms to your sides?</p>
+                    <div class="file-upload">
+                        <label for="front-view"><strong>Upload Image</strong></label>
+                        <br/>
+                        <input type="file" id="FrontViewImage" name="FrontViewImage"/>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-6 right">
+                    <h4 class="visible-xs text-center">Back View</h4>
+                    <figure class="text-center"><img src="images/backview.JPG" alt="Back View"/></figure>
+                </div>
+                <div class="col-sm-6">
+                    <h4><span class="label label-danger">Back View </span></h4>
+                    <p>How does your shirt look from the back, arms to your sides?</p>
+                    <div class="file-upload">
+                        <label for="back-view"><strong>Upload Image</strong></label>
+                        <br/>
+                        <input type="file" id="BackViewImage" name="BackViewImage"/>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-6 right">
+                    <h4 class="visible-xs text-center">Under Arm</h4>
+                    <figure class="text-center"><img src="images/underarm.JPG" alt="Under Arm"/></figure>
+                </div>
+                <div class="col-sm-6">
+                    <h4><span class="label label-danger">Under Arm</span></h4>
+                    <p>How does your shirt look from the front, arms in a wingspan?</p>
+                    <div class="file-upload">
+                        <label for="under-arm"><strong>Upload Image</strong></label>
+                        <br/>
+                        <input type="file" id="UnderArmImage" name="UnderArmImage"/>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-6 right">
+                    <h4 class="visible-xs text-center">Side Arm</h4>
+                    <figure class="text-center"><img src="images/sidearm.JPG" alt="Side Arm"/></figure>
+                </div>
+                <div class="col-sm-6">
+                    <h4><span class="label label-danger">Side Arm</span></h4>
+                    <p>How does your shirt look from the side arms?</p>
+                    <div class="file-upload">
+                        <label for="side-arm"><strong>Upload Image</strong></label>
+                        <br/>
+                        <input type="file" id="SideArmImage" name="SideArmImage"/>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Overall, how do you feel about your order fit?</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <textarea name="comment" class="form-control" ng-model="comment"
+                                  ng-pattern="/^[\w-!@#.,;:\$%\^&\* ]*$/" id="comment" cols="40" rows="2"
+                                  placeholder="Comment"></textarea>
+                        <span style="color:red"
+                              ng-show="assessmentForm.comment.$touched && assessmentForm.comment.$invalid">
+<span ng-show="assessmentForm.comment.$error.pattern"> The feedback field has invalid characters.</span></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4">
+                    <button type="submit" name="submit" ng-disabled="assessmentForm.$invalid" ng-click="submit()"
+                            id="submit" value="Submit" class="btn btn-primary">Submit Fit Assessment <span
+                            class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

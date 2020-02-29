@@ -1,0 +1,168 @@
+<!-- Body [Enter your text here] -->
+<div id="section2" class= container pad-section>
+    <h1 class="title">Schedule an Appointment</h1>
+    <br><br>
+    <div class="container">
+        <form class="well form-horizontal" name="appointmentForm" action=" " method="post" id="appointmentForm">
+            <fieldset>
+
+                <!-- Radio Buttons-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Appointment Type:</label>
+                    <div class="col-md-8 inputGroupContainer">
+                        <div class="col-md-4 inputGroupContainer">
+                            <label class="custom-control custom-radio">
+                                <h4><span class="label label-warning">First Time:</span></h4><span class="radio">
+<input type="radio" name="appointment" class="custom-control-input" id="first-fitting" value="First Fitting">
+<label for="first-fitting">
+<strong>First Fitting</strong> (45 Minutes)<br/>
+A Specialist will learn about your fit preferences, gather your measurements, provide styling advice, and save your personal size profile to place an order.</label>
+</span><br>
+
+                                <label class="custom-control custom-radio">
+<span class="radio">
+<input type="radio" name="appointment" class="custom-control-input" id="consultation" value="Consultation">
+<label for="consultation">
+<strong>Consultation</strong> (30 Minutes)<br/>
+Talk through fit, timelines, and any questions you have regarding wearing Northeastern University garments.</label>
+</span><br>
+                        </div>
+                        <div class="col-md-4 inputGroupContainer">
+                            <label class="custom-control custom-radio">
+                                <h4><span class="label label-warning">Returning:</span></h4>
+                                <span class="radio">
+<input type="radio" name="appointment" class="custom-control-input" id="fit-check" value="Fit Check">
+<label for="consultation">
+<label for="fit-check">
+<strong>Fit Check</strong> (30 Minutes)<br>
+If you've received an e-mail indicating that your garment(s) arrived, schedule a fit check to try on them on to confirm fit.</label>
+</span><br>
+
+                                <label class="custom-control custom-radio">
+<span class="radio">
+<input type="radio" name="appointment" class="custom-control-input" id="shop" value="Shop">
+<label for="shop">
+<strong>Shop</strong> (30 Minutes)<br>
+Browse our latest fabrics and shop with ease using your saved size profile at Northeastern University Tailors.</label>
+</span><br>
+                        </div>
+                    </div>
+                    <!-- Date and Time input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Pick the date and time</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                <input type="text" name="datetime" class="form-control" id="datetime" size="40"
+                                       required="required">
+                                <script type="text/javascript">
+                                    $("#datetime").datetimepicker({
+                                        format: 'yyyy-mm-dd hh:ii'
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Select Basic -->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Shopping for</label>
+                        <div class="col-md-4 selectContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                <select name="major" class="form-control selectpicker">
+                                    <option value=" ">---</option>
+                                    <option value='Men Hockey Gear'>Men Hockey Gear</option>
+                                    <option value='Women Hockey Gear'>Women Hockey Gear</option>
+                                    <option value='Shirts'>Shirts</option>
+                                    <option value='Pants'>Pants</option>
+                                    <option value='Suits'>Suits</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name *</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" name="fname" class="form-control" id="fname" required="required"
+                                       size="40" placeholder="First Name">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Last Name *</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" name="lname" class="form-control" required="required" size="40"
+                                       placeholder="Last Name">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Email Address *</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input type="email" name="emailAddress" class="form-control" id="emailAddress"
+                                       placeholder="E-Mail Address" required="required">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Phone Number *</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input type="text" name="phone" class="form-control" id="phone"
+                                       placeholder="Phone Number" required="required">
+                                <span style="color:red"
+                                      ng-show="appointmentForm.phone.$touched && appointmentForm.phone.$invalid">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Referred by</label>
+                        <div class="col-md-4 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" name="referredBy" class="form-control" id="fname" size="40"
+                                       placeholder="Referred by">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Button -->
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-8 inputGroupContainer">
+                            <div class="col-md-2">
+                                <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-success">
+                                    Confirm This Appointment <span class="glyphicon glyphicon-send"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

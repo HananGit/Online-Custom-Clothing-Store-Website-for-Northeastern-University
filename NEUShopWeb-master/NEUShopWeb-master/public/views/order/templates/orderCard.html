@@ -1,0 +1,25 @@
+<md-card md-theme="{{ !$ctrl.data.status ? 'dark-red' : 'default' }}" md-theme-watch>
+    <md-card-content>
+        <md-progress-linear md-mode="determinate" value="50"></md-progress-linear>
+        <div class="col-md-12">
+        <h3 class="pull-left">{{$ctrl.data.orderDateTime.split('T')[0]}}</h3>
+        <!--<product-card ng-repeat="product in $ctrl.data.productList" data="product"></product-card>-->
+        <h4 class="pull-right">Total : {{$ctrl.data.total}}</h4>
+        </div>
+    <div class='md-padding' layout="row" layout-wrap>
+        <md-card ng-repeat="product in $ctrl.data.productList" data="product">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{product.productName}}</span>
+                    <span class="md-subhead">Price : {{product.sellingPrice}}</span>
+                    <span class="md-subhead">Quantity : {{product.qty}}</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                    <img ng-src="{{product.img}}" class="md-media-sm md-card-image" alt="Washed Out">
+                </md-card-title-media>
+            </md-card-title>
+        </md-card>
+    </div>
+        <md-button class="pull-right" ng-if="$ctrl.data.status" ng-click="$ctrl.cancelorder()">Cancel</md-button>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,25 @@
+<div class="container" style="padding-top:20px; ">
+    <div class="col-md-10">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Search Products</label>
+            <input ng-model="model.searchString" type="text" ng-change="model.filterProducts()">
+        </md-input-container>
+    </div>
+    <div class="col-md-2">
+        <md-input-container>
+            <label>Criteria</label>
+            <md-select ng-model="model.criteria" ng-change="model.filterProducts()">
+                <md-option ng-repeat="crit in model.criterias" ng-value="crit">
+                    {{crit}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+    <div class="col-md-12">
+    <product-card ng-repeat="product in model.filteredList" data="product">
+    </product-card>
+    <div ng-if="model.filteredList.length ===0">Sorry Product not available! Please search clear search for other
+        products :)
+    </div>
+    </div>
+</div>
